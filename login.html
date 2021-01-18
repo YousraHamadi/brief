@@ -74,21 +74,27 @@
     </div>
 </div> 
             <script>
+              
+                
                     function login(){
+                      
+
+                        var user= localStorage.getItem("user");
+                        var pass= localStorage.getItem("Pass");
                         var email= document.getElementById("email").value;
                         var motClé= document.getElementById("passWord").value;
                         
-                        if(email != '' && motClé != ''){
                         
-                        window.location='HTMLAJAX.html';
-                        return location.replace("HTMLAJAX.html");
+                        if( user===email && pass===motClé){
+                        window.location="HTMLAJAX.html"                        
+                        // // return location.replace("HTMLAJAX.html");
+                         }
+        
+                       else{
+                            if(email=='' && motClé==''){
+                                alert("veuillez saisisez vos coordonnées")
+                            }  
                         }
-                        
-                        else{
-                            alert("vérifer ")
-                        }
-
-
                     }
             </script>
 </body>
