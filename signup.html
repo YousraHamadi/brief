@@ -75,7 +75,7 @@
                     </div>
                 </div>
             </div>
-                 <center><a href="login.html"><button type="button" class="btnSubmit" id="btn1 onclick="signUp()">Submit</button></a></center>
+                 <center><a href="#"><button type="button" class="btnSubmit" id="btn1">SignUp</button></a></center>
                   <!-- signUp -->
        <div id="signUp">
         </a>
@@ -84,7 +84,10 @@
     </div>
 </div> 
 <script>
-    function signUp(){
+   
+                     var click= document.getElementById("btn1")
+    click.onclick=function(){
+        
            var prenom= document.getElementById("name").value;
            var nom= document.getElementById("firstName").value;
            var Email= document.getElementById("Email").value;
@@ -93,20 +96,18 @@
            if(passWord !=confirmPass){
                alert("recréer le mot de passe correct")
            }
-           else if (passWord===confirmPass)
-           if(logalStorage.getItem('users') == null){
-               localStorage.setItem('users','[]');
+           else if (passWord===confirmPass){
+               
+               localStorage.setItem("user",Email)
+               localStorage.setItem("Pass", passWord)
+               
+                
+
            }
-           var transfert=JSON.parse(localStorage.setItem('users'));
-           if (transfert){
-            transfert.push([{dataName: prenom, dataFirstName:nom, dataMail:Email,DataPassword:passWord,dataConfirmPass:confirmPass}]);
-            localStorage.setItem('users',JSON.stringify(transfert));
-           }
-           else{
-               localStorage.setItem('users',JSON.stringify([{dataName: prenom, dataFirstName:nom, dataMail:Email,DataPassword:passWord,dataConfirmPass:confirmPass}]));
-           }
-           
+          
+        window.location="login.html";
           }
+    
     
 </script>
 </body>
