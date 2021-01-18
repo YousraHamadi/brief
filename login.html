@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            width: 600px;
+        height: 400px;
+        margin: 40px auto;
+        padding: 20px;
+        }
+
+        .note
+{
+    text-align: center;
+    height: 80px;
+    background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+    color: #fff;
+    font-weight: bold;
+    line-height: 80px;
+}
+.form-content
+{
+    padding: 5%;
+    border: 1px solid #ced4da;
+    margin-bottom: 2%;
+}
+.form-control{
+    border-radius:1.5rem;
+}
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: #0062cc;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+   <!------ Include the above in your HEAD tag ---------->
+
+<div class="container register-form">
+    <div class="form">
+        <div class="note">
+            <p>Login</p>
+        </div>
+
+        <div class="form-content">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email *" id="email"/><br><br>
+                    </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Password *" id="passWord"/><br><br>
+                    </div>
+                    
+                </div>
+            </div>
+                 <center>  <button type="button" class="btnSubmit" id="btn2" onclick="login()">Login</button></center>
+                 <a href="HTMLAJAX.html" id="link"></a>
+        </div>
+    </div>
+</div> 
+            <script>
+                    function login(){
+                        var email= document.getElementById("email").value;
+                        var motClé= document.getElementById("passWord").value;
+                        
+                        if(email != '' && motClé != ''){
+                        
+                        window.location='HTMLAJAX.html';
+                        return location.replace("HTMLAJAX.html");
+                        }
+                        
+                        else{
+                            alert("vérifer ")
+                        }
+
+
+                    }
+            </script>
+</body>
+</html>
