@@ -84,8 +84,7 @@
     </div>
 </div> 
 <script>
-   
-                     var click= document.getElementById("btn1")
+    var click= document.getElementById("btn1")
     click.onclick=function(){
         
            var prenom= document.getElementById("name").value;
@@ -96,18 +95,19 @@
            if(passWord !=confirmPass){
                alert("recréer le mot de passe correct")
            }
-           else if (passWord===confirmPass){
+          
+              else if(Email =='' || passWord =='') 
+              {
+                  alert("veuillez saisissez vos coordonnées");
+              }
+              else if (passWord===confirmPass){
                
                localStorage.setItem("user",Email)
-               localStorage.setItem("Pass", passWord)
-               
-                
-
-           }
-          
-        window.location="login.html";
-          }
-    
+               localStorage.setItem("Pass", passWord);
+               window.location="login.html";
+            }
+           
+            }
     
 </script>
 </body>
